@@ -7,7 +7,7 @@ public class Main
         double height = 0;
         double perimeter;
         double area;
-        double hypothenuse = 0;
+        double hypothenuse;
 
 
         Scanner in = new Scanner(System.in);
@@ -16,13 +16,21 @@ public class Main
         if (in.hasNextDouble())
         {
             width = in.nextDouble();
-            System.out.println(width);
+            in.nextLine();
+        }
+        else {
+            System.out.println("Bad input");
+            System.exit(0);
         }
         System.out.println("Please input the height of the rectangle: ");
         if (in.hasNextDouble())
         {
             height = in.nextDouble();
-            System.out.println(height);
+            in.nextLine();
+        }
+        else {
+            System.out.println("Bad input");
+            System.exit(0);
         }
         perimeter = height + height + width + width;
         System.out.println("The perimeter of the rectangle is: " + perimeter);
